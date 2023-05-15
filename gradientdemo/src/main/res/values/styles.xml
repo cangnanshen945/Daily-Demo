@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GradientLayout">
+        <attr name="startX" format="float"/>
+        <attr name="startY" format="float"/>
+        <attr name="endX" format="float"/>
+        <attr name="endY" format="float"/>
+        <attr name="startColor" format="color"/>
+        <attr name="endColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="ShadowLayout">
+        <attr format="color" name="shadowColor"/>
+        <attr format="color" name="bgColor"/>
+        <attr format="dimension" name="shadowRadius"/>
+        <attr format="dimension" name="blurRadius"/>
+        <attr format="dimension" name="xOffset"/>
+        <attr format="dimension" name="yOffset"/>
+    </declare-styleable>
+    <declare-styleable name="ShadowRelativeLayout">
+        <attr format="color" name="shadow_color"/>
+        <attr format="dimension" name="shadow_radius"/>
+        <attr format="dimension" name="shadow_blur"/>
+        <attr format="dimension" name="shadow_dx"/>
+        <attr format="dimension" name="shadow_dy"/>
+    </declare-styleable>
+</resources>

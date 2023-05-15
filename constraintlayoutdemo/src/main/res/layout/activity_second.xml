@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--  angle: top 0, right 90, bottom 180, left 270   -->
+    <!--  radius: distance from center to center   -->
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@color/purple_200"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="80dp" />
+
+    <!-- bias: top 0, bottom 1, left 0, right 1, center 0.5-->
+
+
+    <!-- gone margin: margin when constraint view gone-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_goneMarginBottom="60dp" />
+
+    <!-- 0dp means MATCH_CONSTRAINT; 3 types: wrap, spread, percent -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

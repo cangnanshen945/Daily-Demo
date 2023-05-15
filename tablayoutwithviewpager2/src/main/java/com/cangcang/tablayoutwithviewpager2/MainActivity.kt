@@ -1,16 +1,19 @@
 package com.cangcang.tablayoutwithviewpager2
 
+import android.R.attr
+import android.content.Intent
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
+import android.net.Uri
 import android.os.Bundle
 import android.view.Gravity
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
-import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -62,5 +65,24 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         layoutMediator.detach()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        // 选取图片的返回值
+        // 选取图片的返回值
+        if (requestCode === 1) {
+            //
+            if (resultCode === RESULT_OK) {
+                val uri: Uri = data?.data ?: return
+                val cursor = contentResolver.query(uri, null, null, null, null)
+                cursor?.moveToFirst()
+                // String imgNo = cursor.getString(0); // 图片编号
+                val v_path = cursor?.getString(1) // 图片文件路径
+                val v_size = cursor?.getString(2) // 图片大小
+                val v_name = cursor?.getString(3) // 图片文件名
+                cursor?.close()
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }

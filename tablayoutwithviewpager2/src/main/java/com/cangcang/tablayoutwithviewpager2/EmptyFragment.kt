@@ -1,11 +1,14 @@
 package com.cangcang.tablayoutwithviewpager2
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_empty.*
+
 
 /**
  * author: zhangjunqian
@@ -28,6 +31,11 @@ class EmptyFragment : Fragment() {
             textView.text = "first page"
         } else {
             textView.text = "second page"
+        }
+        textView.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+            intent.type = "image/* video/*"
+            startActivityForResult(intent, 8)
         }
     }
 }

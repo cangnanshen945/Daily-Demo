@@ -10,7 +10,14 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
     }
 }
 rootProject.name = "DailyAndroidDemo"
 include ':tablayoutwithviewpager2'
+include ':constraintlayoutdemo'
+include ':camerademo'
+include ':walkreminddemo'
+include ':webviewvulnerabilitydemo'
+include ':composesample'
+include ':gradientdemo'

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/center_block"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--  angle: top 0, right 90, bottom 180, left 270   -->
+    <!--  radius: distance from center to center   -->
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@color/purple_200"
+        app:layout_constraintCircle="@id/center_block"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="80dp" />
+
+    <!-- bias: top 0, bottom 1, left 0, right 1, center 0.5-->
+
+    <TextView
+        android:id="@+id/bottom_block"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@color/red"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <!-- gone margin: margin when constraint view gone-->
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:background="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@id/bottom_block"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_goneMarginBottom="60dp" />
+
+    <!-- 0dp means MATCH_CONSTRAINT; 3 types: wrap, spread, percent -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/purple_700"
+        android:text="hahaha"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_goneMarginBottom="60dp"
+        app:layout_constraintWidth_default="wrap"
+        app:layout_constraintWidth_percent="0.5"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
