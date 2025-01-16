@@ -3,10 +3,13 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        mavenLocal()
+        maven {
+            url = uri('../local-plugin-repository')
+        }
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
@@ -14,10 +17,13 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "DailyAndroidDemo"
-include ':tablayoutwithviewpager2'
+//include ':tablayoutwithviewpager2'
 include ':constraintlayoutdemo'
-include ':camerademo'
-include ':walkreminddemo'
-include ':webviewvulnerabilitydemo'
-include ':composesample'
-include ':gradientdemo'
+//include ':camerademo'
+//include ':walkreminddemo'
+//include ':webviewvulnerabilitydemo'
+//include ':composesample'
+//include ':gradientdemo'
+include ':lib'
+include ':myapplication'
+include ':imagebitmaptest'

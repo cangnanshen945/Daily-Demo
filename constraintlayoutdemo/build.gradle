@@ -1,6 +1,12 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.example.lib' version '1.0'
+}
+
+greeting {
+    message = 'Hi'
+    greeter = 'Gradle'
 }
 
 android {

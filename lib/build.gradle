@@ -1,0 +1,34 @@
+plugins {
+    id 'java-library'
+    id 'org.jetbrains.kotlin.jvm'
+    id 'java-gradle-plugin'
+    id 'com.gradle.plugin-publish' version '1.2.1'
+}
+version = '1.0'
+gradlePlugin {
+    plugins {
+        create("GreetingPlugin") {
+            id = "com.example.lib"
+            implementationClass = "com.example.lib.GreetingPlugin"
+        }
+    }
+}
+
+dependencies {
+    implementation("org.ow2.asm:asm-util:7.0")
+    implementation("com.android.tools.build:gradle-api:7.1.0-alpha13")
+}
+
+publishing {
+    repositories {
+        maven {
+            name = 'localPluginRepo'
+            url = '../local-plugin-repository'
+        }
+    }
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}

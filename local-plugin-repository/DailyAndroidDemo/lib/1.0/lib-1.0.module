@@ -1,0 +1,122 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "DailyAndroidDemo",
+    "module": "lib",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.2"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lib-1.0.jar",
+          "url": "lib-1.0.jar",
+          "size": 5471,
+          "sha512": "d54fcb719c95275a475ee66d68689cccb04e8c35b62e589968fe3c476ddc3be38433d0934bb03cec58fd7d1e869d2539e2bf23b35403ad179cd44094e4249691",
+          "sha256": "6821efc2d08d58224922149328515fae5221c205a07a0dbe4894b2ea830ba392",
+          "sha1": "370a8a3017bdba7bb11c80148c81f3a102387875",
+          "md5": "99c7df7742621a9d52282956c09ec68b"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.9.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "lib-1.0.jar",
+          "url": "lib-1.0.jar",
+          "size": 5471,
+          "sha512": "d54fcb719c95275a475ee66d68689cccb04e8c35b62e589968fe3c476ddc3be38433d0934bb03cec58fd7d1e869d2539e2bf23b35403ad179cd44094e4249691",
+          "sha256": "6821efc2d08d58224922149328515fae5221c205a07a0dbe4894b2ea830ba392",
+          "sha1": "370a8a3017bdba7bb11c80148c81f3a102387875",
+          "md5": "99c7df7742621a9d52282956c09ec68b"
+        }
+      ]
+    },
+    {
+      "name": "javadocElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "javadoc",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lib-1.0-javadoc.jar",
+          "url": "lib-1.0-javadoc.jar",
+          "size": 261,
+          "sha512": "bd95e4a3b6b6557c35b438ad5d8b8be291ba9528ac5abdfd916a8310124be3432f2d8407947dd0ec90f4e4e38af3f1e2d10e4f6176fbdd5d5ab8313dd545c0e3",
+          "sha256": "85c75ab74192bf4484e87c2768ef3ba5d0b482d5fbb01e5a5674dde6747b7bc7",
+          "sha1": "cd84e811b1a8baf418ca6b1c15468c14ca98209a",
+          "md5": "2705620836f6696accef4b2fbeacf6a5"
+        }
+      ]
+    },
+    {
+      "name": "sourcesElements",
+      "attributes": {
+        "org.gradle.category": "documentation",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.docstype": "sources",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "lib-1.0-sources.jar",
+          "url": "lib-1.0-sources.jar",
+          "size": 974,
+          "sha512": "6c94e58037a636980872bf5fe332f1f2f2e0ed185d9a536d504c01e6953570b5ced69dadcef3cc17e73ad42a87a6de7b01b7efd16d650ed1f809b0511a22557a",
+          "sha256": "4eb9ed70dedb53e96e959ca6a1e370ea788e9585122b8f8ae149bddda172ce5b",
+          "sha1": "387d8adc8a6ca34f8609851462542012e883d058",
+          "md5": "a6cabe4be50b9969f9f3afc63cd89cad"
+        }
+      ]
+    }
+  ]
+}
